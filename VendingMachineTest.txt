@@ -1,0 +1,58 @@
+package edu.towson.cis.cosc442.project2.vendingmachine;
+
+import org.junit.After;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
+
+public class VendingMachineTest {
+
+	VendingMachine v;
+	
+	@Before
+	 public void setUp() throws Exception {
+	  v = new VendingMachine();
+	 }
+	/**
+	  * Test for the addItem() method of the {@link VendingMachine} class.
+	  */
+	 @Test
+	 public void testAddItem() {
+	  Assert.assertEquals("Add Item", v, v);
+	 }
+	 /**
+	  * Test for the removeItem() method of the {@link VendingMachine} class.
+	  */
+	 @Test
+	 public void testRemoveItem() {
+	  Assert.assertEquals("Remove Item", v, v);
+	 }
+	 /**
+	  * Test for the insertMoney() method of the {@link VendingMachine} class.
+	  */
+	 @Test
+	 public void testInsertMoney() {
+	  Assert.assertNotNull("Insert Money", v);
+	 }
+	 /**
+	  * Test for the makePurchase() method of the {@link VendingMachine} class.
+	  */
+	 @Test
+	 public void testMakePurchase() {
+	  Assert.assertTrue("Purchased", true);
+	 }
+	 /**
+	  * Test for the returnChange() method of the {@link VendingMachine} class.
+	  */
+	 @Test
+	 public void testReturnChange() {
+	  Assert.assertEquals(.75, v.returnChange(),0.001);
+	 }	 
+	 /**
+	  * Cleans up test objects after a test case is executed.
+	 */	 
+	 @After
+	 public void tearDown(){
+	  v = null;
+	 }
+	}

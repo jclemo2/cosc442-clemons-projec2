@@ -1,0 +1,44 @@
+package edu.towson.cis.cosc442.project2.vendingmachine;
+
+import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+public class VendingMachineItemTest {
+	
+	VendingMachineItem vend;
+	
+	@Before
+	 public void setUp() throws Exception {
+	  vend = new VendingMachineItem("Chips", 1.25);
+	 }
+
+	 /**
+	  * Test for the getName() method of the {@link VendingMachineItem} class.
+	  */
+	 @Test
+	 public void testGetName() {
+	  assertEquals("Chips", vend.getName(),0.001);
+	 }
+
+	 /**
+	  * Test for the getPrice() method of the {@link VendingMacineItem} class.
+	  */
+	 @Test
+	 public void testGetPrice() {
+	  assertEquals(1.25, vend.getPrice(), 0.0001);
+	  
+	 }
+	 
+	 /**
+	  * Cleans up test objects after a test case is executed.
+	  */
+	 @After
+	 public void tearDown(){
+	  vend = null;
+	  
+	 }
+	}
+
